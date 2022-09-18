@@ -1,0 +1,67 @@
+program ProsesOrderMakananAtauMinumanViaOnline
+
+READ AND WRITE "NamaRestoran" with string
+READ AND WRITE "Makanan" with string
+READ AND WRITE "Minuman" with string
+READ AND WRITE "NamaMakanan" AS INTEGER with value
+READ AND WRITE "NamaMinuman" AS INTEGER with value
+READ AND WRITE "MenuMakanan" AS INTEGER with value
+READ AND WRITE "MenuMinuman" AS INTEGER with value
+READ AND WRITE "HargaMakanan" AS INTEGER with value
+READ AND WRITE "HargaMinuman" AS INTEGER with value
+READ AND WRITE "JumlahMakanan" AS INTEGER with value
+READ AND WRITE "JumlahMinuman" AS INTEGER with value
+READ AND WRITE "TotalPesanan" AS INTEGER with value
+READ AND WRITE "e-money" with string
+READ AND WRITE "debit" with string
+READ AND WRITE "NoTagihan" AS INTEGER with value
+READ AND WRITE "Pembayaran" AS INTEGER with value
+READ AND WRITE "Nota" with string
+
+DISPLAY "Login Aplikasi"
+SET "NamaRestoran" with "Chatime"
+DISPLAY "Chatime"
+    IF "NamaRestoran" equal to "Chatime"
+        PRINT "Menampilkan Menu Minuman"
+        WHILE "MenuMinuman" equal "yes"
+            STORE "MenuMinuman" with "Boba"
+            STORE "Boba" with 5
+            SET "HargaMinuman" equal to "Boba" * 5
+        FOR "MenuMinuman" with ++1
+        SET "TotalPesanan" equal to "MenuMinuman"
+    ELSE 
+        PRINT "Menampilkan Menu Makanan"
+        WHILE "MenuMakanan" equal "yes"
+            STORE "MenuMakanan" with "Mie"
+            STORE "Mie" with 1
+            SET "HargaMakanan" equal to "Mie" * 1
+        FOR "MenuMakanan" with ++1
+            IF "MenuMinumann" equal "yes"
+                PRINT "Menampilkan Menu Minuman"
+                WHILE "MenuMinuman" equal "yes"
+                    STORE "MenuMinuman" with "Boba"
+                    STORE "Boba" with 5
+                    SET "HargaMinuman" equal to "Boba" * 5
+                FOR "MenuMinuman" with ++1
+                SET "TotalPesanan" equal to "MenuMakanan + MenuMinuman"
+            ELSE
+            PRINT ""
+STORED "TotalPesanan" with "MenuMakanan && MenuMinumann"
+PRINT "TotalPesanan"
+IF "TotalPesanan" equal to "yes"
+    STORE "Pembayaran" with "debit"
+    IF "Pembayaran" equal "debit"
+        STORE "NoTagihan" with "TotalPesanan"
+        PRINT "NoTagihan"
+        SET "ProsesPembayaran" equal "NoTagihan - Pembayaran"
+        PRINT "Nota"
+    DISPLAY "Pesanan Datang"
+    ELSE
+        Pembayaran" equal "e-money"
+        STORE "NoTagihan" with "TotalPesanan"
+        PRINT "NoTagihan"
+        SET "ProsesPembayaran" equal "NoTagihan - Pembayaran"
+        PRINT "Nota"
+    DISPLAY "Pesanan Datang"
+ELSE
+DISPLAY "Pesanan dibatalkan"
